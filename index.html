@@ -17,15 +17,24 @@
       --bg-3: #310d52;
       --purple-1: #ead7ff;
       --purple-2: #d8a4ff;
+      --purple-3: #b86ef6;
       --purple-4: #8b35c9;
       --purple-5: #5a1f8f;
+      --card: rgba(27, 10, 45, 0.8);
       --text: #fdf7ff;
       --muted: #e7d3ff;
       --soft-border: rgba(255, 255, 255, 0.18);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: 'DM Sans', Arial, sans-serif;
@@ -41,7 +50,8 @@
       text-align: center;
     }
 
-    body::before, body::after {
+    body::before,
+    body::after {
       content: '✦   ✧   ✦   ✧';
       position: fixed;
       left: 50%;
@@ -54,31 +64,65 @@
       animation: drift 8s ease-in-out infinite;
     }
 
-    body::before { top: 12%; }
-    body::after { bottom: 12%; animation-delay: -4s; }
+    body::before {
+      top: 12%;
+    }
+
+    body::after {
+      bottom: 12%;
+      animation-delay: -4s;
+    }
 
     @keyframes drift {
       0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.6; }
       50% { transform: translateX(-50%) translateY(-12px); opacity: 1; }
     }
 
-    .page { position: relative; z-index: 1; }
-    header { padding: 20px 20px 0; }
-
-    .hero-wrap {
-      width: min(1300px, 100vw);
-      margin: 0 auto;
+    .page {
       position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 260px;
-      overflow: hidden;
+      z-index: 1;
     }
 
-    .hero-logo { display: none; }
+    header {
+      padding: 80px 20px 36px;
+    }
 
-    main { max-width: 940px; margin: 0 auto; padding: 20px 18px 50px; }
+    .brand {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(4rem, 10vw, 7rem);
+      line-height: 1;
+      letter-spacing: 1px;
+      font-weight: 400;
+      color: #f7eeff;
+      text-shadow:
+        0 0 8px rgba(255,255,255,0.9),
+        0 0 22px rgba(216,164,255,0.85),
+        0 0 42px rgba(168,85,247,0.9);
+      margin-bottom: 14px;
+    }
+
+    .tagline {
+      font-family: 'Cinzel', serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.38rem;
+      text-transform: uppercase;
+      color: var(--purple-1);
+      opacity: 0.9;
+    }
+
+    .divider {
+      width: 160px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--purple-2), transparent);
+      box-shadow: 0 0 15px rgba(184, 110, 246, 0.8);
+      margin: 22px auto 0;
+    }
+
+    main {
+      max-width: 940px;
+      margin: 0 auto;
+      padding: 20px 18px 50px;
+    }
 
     .card {
       background: linear-gradient(135deg, rgba(44, 14, 70, 0.82), rgba(22, 8, 38, 0.9));
@@ -99,35 +143,19 @@
       text-shadow: 0 0 16px rgba(216,164,255,0.6);
     }
 
-    .card p { color: var(--muted); line-height: 1.75; font-size: 1.04rem; }
-
-    .about-bio { font-family: 'DM Sans', Arial, sans-serif; white-space: normal; }
-    .bio-title {
-      display: inline-block;
-      color: #f3dcff;
-      font-family: 'Cinzel', serif;
-      font-size: 1.15rem;
-      margin-bottom: 12px;
-      text-shadow: 0 0 12px rgba(216,164,255,0.5);
-    }
-    .bio-line { display: block; margin: 5px 0; }
-    .bio-members { margin-top: 16px; }
-    .bio-closing { margin-top: 16px; }
-
-    .performance-visual {
-      width: min(76%, 760px);
-      margin: 8px auto 26px;
-      display: block;
-      border-radius: 22px;
-      border: 1px solid rgba(255,255,255,0.10);
-      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.30), 0 0 20px rgba(184,110,246,0.16);
-      opacity: 0.88;
-      mix-blend-mode: screen;
-      filter: saturate(0.9) contrast(1.05) brightness(0.96);
-      background: rgba(0,0,0,0.15);
+    .card p {
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 1.04rem;
     }
 
-    .members { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 18px; }
+    .members {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 18px;
+    }
 
     .member {
       display: inline-block;
@@ -147,9 +175,15 @@
       box-shadow: 0 0 22px rgba(216,164,255,0.8);
     }
 
-    .social-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 22px; }
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
     .social-links a {
-      display: inline-block;
       text-decoration: none;
       color: var(--text);
       background: linear-gradient(135deg, #7c35b4, #a855f7);
@@ -160,6 +194,7 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
       box-shadow: 0 0 18px rgba(168,85,247,0.22);
     }
+
     .social-links a:hover {
       transform: translateY(-3px);
       background: linear-gradient(135deg, #d9b7ff, #f3dcff);
@@ -167,40 +202,43 @@
       box-shadow: 0 0 26px rgba(216,164,255,0.9);
     }
 
-    footer { padding: 10px 18px 45px; color: #e7d3ff; font-size: 0.85rem; opacity: 0.85; }
+    footer {
+      padding: 10px 18px 45px;
+      color: #e7d3ff;
+      font-size: 0.85rem;
+      opacity: 0.85;
+    }
 
     @media (max-width: 640px) {
-      .performance-visual { width: min(90%, 760px); }
-      .card { padding: 28px 18px; }
+      header {
+        padding-top: 60px;
+      }
+
+      .tagline {
+        letter-spacing: 0.18rem;
+      }
+
+      .card {
+        padding: 28px 18px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="page">
     <header>
-      <div class="hero-wrap"></div>
+      <div class="brand">Amethyst Entertainment</div>
+      <div class="tagline">Roblox entertainment inspired by KATSEYE</div>
+      <div class="divider"></div>
     </header>
 
     <main>
-      <img class="performance-visual" src="./file_00000000af2c81f4a8091bc347f0a30a.png" alt="Amethyst Entertainment performance lineup" />
-
       <section class="card">
         <h2>About Us</h2>
-        <p class="about-bio">
-          <span class="bio-title">✦ 𝑨𝒎𝒆𝒕𝒉𝒚𝒔𝒕 𝑬𝒏𝒕𝒆𝒓𝒕𝒂𝒊𝒏𝒎𝒆𝒏𝒕 ✦</span>
-          <span class="bio-line">୨୧ 𝐑𝐨𝐛𝐥𝐨𝐱 𝐊𝐀𝐓𝐒𝐄𝐘𝐄 𝐜𝐨𝐯𝐞𝐫 𝐠𝐫𝐨𝐮𝐩</span>
-          <span class="bio-line">୨୧ 𝐀𝐜𝐭𝐢𝐯𝐞 𝐬𝐢𝐧𝐜𝐞 𝐉𝐚𝐧𝐮𝐚𝐫𝐲 𝟐𝟎𝟐𝟔</span>
-          <span class="bio-line">୨୧ 𝐏𝐞𝐫𝐟𝐨𝐫𝐦𝐚𝐧𝐜𝐞𝐬 • 𝐓𝐨𝐮𝐫𝐬 • 𝐏𝐫𝐨𝐣𝐞𝐜𝐭𝐬</span>
-          <span class="bio-line">୨୧ 𝐁𝐮𝐢𝐥𝐝𝐢𝐧𝐠 𝐚 𝐟𝐮𝐧 𝐑𝐨𝐛𝐥𝐨𝐱 𝐟𝐚𝐧𝐝𝐨𝐦 𝐬𝐩𝐚𝐜𝐞</span>
-          <span class="bio-line bio-members">🛡 𝐃𝐚𝐧𝐢𝐞𝐥𝐚 — 𝐀𝐩𝐞𝐱</span>
-          <span class="bio-line">⚓️ 𝐒𝐨𝐩𝐡𝐢𝐚 — 𝐌𝐞𝐢 𝐌𝐞𝐢</span>
-          <span class="bio-line">🍒 𝐌𝐞𝐠𝐚𝐧 — 𝐀𝐥𝐞𝐱</span>
-          <span class="bio-line">🐚 𝐘𝐨𝐨𝐧𝐜𝐡𝐚𝐞 — 𝐀𝐧𝐧</span>
-          <span class="bio-line">🗝 𝐋𝐚𝐫𝐚 — 𝐋𝐞𝐦𝐨𝐧</span>
-          <span class="bio-line">👑 𝐌𝐚𝐧𝐨𝐧 — 𝐍𝐢𝐬𝐚</span>
-          <span class="bio-line bio-closing">♡ 𝐀𝐥𝐥 𝐊𝐀𝐓𝐒𝐄𝐘𝐄 𝐦𝐞𝐦𝐛𝐞𝐫𝐬 𝐭𝐚𝐤𝐞𝐧</span>
-          <span class="bio-line">♡ 𝐑𝐨𝐛𝐥𝐨𝐱 𝐩𝐞𝐫𝐟𝐨𝐫𝐦𝐚𝐧𝐜𝐞𝐬 + 𝐨𝐫𝐢𝐠𝐢𝐧𝐚𝐥 𝐩𝐫𝐨𝐣𝐞𝐜𝐭𝐬</span>
-          <span class="bio-line">♡ 𝐉𝐨𝐢𝐧 𝐮𝐬 𝐚𝐬 𝐰𝐞 𝐠𝐫𝐨𝐰 ✦</span>
+        <p>
+          Welcome to Amethyst Entertainment! We are a Roblox entertainment group inspired by the style, energy,
+          and creativity of KATSEYE. Our mission is to bring exciting performances, bold visuals, and unforgettable
+          moments to our community.
         </p>
       </section>
 
@@ -208,12 +246,12 @@
         <h2>Our Members</h2>
         <p>All KATSEYE-inspired roles are currently taken.</p>
         <div class="members">
-          <a class="member" href="https://www.tiktok.com/@daniela.rants12" target="_blank" rel="noopener noreferrer">Sophia — Mei Mei</a>
-          <a class="member" href="https://www.tiktok.com/@annaslobodnitsky" target="_blank" rel="noopener noreferrer">Daniela — Apex</a>
-          <a class="member" href="#" target="_blank" rel="noopener noreferrer">Megan — Alex</a>
-          <a class="member" href="#" target="_blank" rel="noopener noreferrer">Yoonchae — Ann</a>
+          <a class="member" href="https://www.tiktok.com/@annaslobodnitsky" target="_blank" rel="noopener noreferrer">Sophia — Mei Mei</a>
+          <a class="member" href="https://www.tiktok.com/@daniela.rants12" target="_blank" rel="noopener noreferrer">Daniela — Apex</a>
+          <a class="member" href="https://www.tiktok.com/@daniela.rants12" target="_blank" rel="noopener noreferrer">Megan — Alex</a>
+          <a class="member" href="https://www.tiktok.com/@aniplackii" target="_blank" rel="noopener noreferrer">Yoonchae — Ann</a>
           <a class="member" href="https://www.tiktok.com/@hanna.sz6" target="_blank" rel="noopener noreferrer">Lara — Lemon</a>
-          <a class="member" href="#" target="_blank" rel="noopener noreferrer">Manon — Nisa</a>
+          <a class="member" href="https://www.tiktok.com/@luvv444.nora" target="_blank" rel="noopener noreferrer">Manon — Nisa</a>
         </div>
       </section>
 
@@ -221,11 +259,11 @@
         <h2>Follow Us</h2>
         <p>Stay connected with Amethyst Entertainment.</p>
         <div class="social-links">
-          <a href="https://www.roblox.com/pl/communities/548951738/Amethyst-Entertainment-The-Royal-Stage#!/about" target="_blank" rel="noopener noreferrer">Roblox</a>
-          <a href="https://www.tiktok.com/@aniplackii" target="_blank" rel="noopener noreferrer">TikTok</a>
-          <a href="https://www.youtube.com/@AmethystEntertainment-y2e" target="_blank" rel="noopener noreferrer">YouTube</a>
-          <a href="https://www.instagram.com/amethystentertainment2026/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://x.com/Amethyst_Ent_" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+          <a href="https://www.roblox.com/" target="_blank" rel="noopener noreferrer">Roblox</a>
+          <a href="https://discord.com/" target="_blank" rel="noopener noreferrer">Discord</a>
+          <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
       </section>
     </main>
