@@ -83,15 +83,7 @@
     }
 
     .hero-logo {
-      width: min(1400px, 100%);
-      max-height: 540px;
-      object-fit: contain;
-      filter: drop-shadow(0 0 18px rgba(216, 164, 255, 0.8)) drop-shadow(0 0 40px rgba(168, 85, 247, 0.7)) saturate(1.2) brightness(1.04);
-      opacity: 0.9;
-      mix-blend-mode: screen;
-      user-select: none;
-      pointer-events: none;
-      transform: translateY(-8px);
+      display: none;
     }
 
     main { max-width: 940px; margin: 0 auto; padding: 20px 18px 50px; }
@@ -159,6 +151,13 @@
       box-shadow: 0 0 18px rgba(184, 110, 246, 0.25);
       font-weight: 600;
       color: #fff;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .member:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 22px rgba(216,164,255,0.8);
     }
 
     .social-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 22px; }
@@ -228,12 +227,12 @@
         <h2>Our Members</h2>
         <p>All KATSEYE-inspired roles are currently taken.</p>
         <div class="members">
-          <span class="member">Sophia — Mei Mei</span>
-          <span class="member">Daniela — Apex</span>
-          <span class="member">Megan — Alex</span>
-          <span class="member">Yoonchae — Ann</span>
-          <span class="member">Lara — Lemon</span>
-          <span class="member">Manon — Nisa</span>
+          <a class="member" href="https://www.tiktok.com/@annaslobodnitsky" target="_blank" rel="noopener noreferrer">Sophia — Mei Mei</a>
+          <a class="member" href="https://www.tiktok.com/@daniela.rants12" target="_blank" rel="noopener noreferrer">Daniela — Apex</a>
+          <a class="member" href="#" target="_blank" rel="noopener noreferrer">Megan — Alex</a>
+          <a class="member" href="#" target="_blank" rel="noopener noreferrer">Yoonchae — Ann</a>
+          <a class="member" href="https://www.tiktok.com/@hanna.sz6" target="_blank" rel="noopener noreferrer">Lara — Lemon</a>
+          <a class="member" href="#" target="_blank" rel="noopener noreferrer">Manon — Nisa</a>
         </div>
       </section>
 
