@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amethyst Entertainment</title>
   <meta name="description" content="Amethyst Entertainment — a Roblox entertainment group inspired by KATSEYE." />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet" />
-
   <style>
     :root {
       --bg-1: #07010d;
@@ -20,21 +18,13 @@
       --purple-3: #b86ef6;
       --purple-4: #8b35c9;
       --purple-5: #5a1f8f;
-      --card: rgba(27, 10, 45, 0.8);
       --text: #fdf7ff;
       --muted: #e7d3ff;
       --soft-border: rgba(255, 255, 255, 0.18);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'DM Sans', Arial, sans-serif;
@@ -64,28 +54,16 @@
       animation: drift 8s ease-in-out infinite;
     }
 
-    body::before {
-      top: 12%;
-    }
-
-    body::after {
-      bottom: 12%;
-      animation-delay: -4s;
-    }
+    body::before { top: 12%; }
+    body::after { bottom: 12%; animation-delay: -4s; }
 
     @keyframes drift {
       0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.6; }
       50% { transform: translateX(-50%) translateY(-12px); opacity: 1; }
     }
 
-    .page {
-      position: relative;
-      z-index: 1;
-    }
-
-    header {
-      padding: 80px 20px 36px;
-    }
+    .page { position: relative; z-index: 1; }
+    header { padding: 80px 20px 36px; }
 
     .brand {
       font-family: 'Great Vibes', cursive;
@@ -94,10 +72,7 @@
       letter-spacing: 1px;
       font-weight: 400;
       color: #f7eeff;
-      text-shadow:
-        0 0 8px rgba(255,255,255,0.9),
-        0 0 22px rgba(216,164,255,0.85),
-        0 0 42px rgba(168,85,247,0.9);
+      text-shadow: 0 0 8px rgba(255,255,255,0.9), 0 0 22px rgba(216,164,255,0.85), 0 0 42px rgba(168,85,247,0.9);
       margin-bottom: 14px;
     }
 
@@ -107,14 +82,11 @@
       font-weight: 400;
       font-size: 1.18em;
       line-height: 0.8;
-      color: #000000;
-      background: #f5f5f5;
-      border: 5px solid #000000;
-      box-shadow: inset 0 0 0 2px rgba(255,255,255,0.75);
-      padding: 0.08em 0.12em 0.02em;
+      color: inherit;
+      background: transparent;
+      padding: 0;
       margin-right: 0.04em;
-      transform: translateY(-0.08em) rotate(-3deg);
-      text-shadow: 0 2px 0 rgba(255,255,255,0.6);
+      transform: translateY(-0.08em);
       vertical-align: middle;
     }
 
@@ -135,11 +107,7 @@
       margin: 22px auto 0;
     }
 
-    main {
-      max-width: 940px;
-      margin: 0 auto;
-      padding: 20px 18px 50px;
-    }
+    main { max-width: 940px; margin: 0 auto; padding: 20px 18px 50px; }
 
     .card {
       background: linear-gradient(135deg, rgba(44, 14, 70, 0.82), rgba(22, 8, 38, 0.9));
@@ -160,11 +128,7 @@
       text-shadow: 0 0 16px rgba(216,164,255,0.6);
     }
 
-    .card p {
-      color: var(--muted);
-      line-height: 1.75;
-      font-size: 1.04rem;
-    }
+    .card p { color: var(--muted); line-height: 1.75; font-size: 1.04rem; }
 
     .members {
       display: flex;
@@ -187,10 +151,7 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .member:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 22px rgba(216,164,255,0.8);
-    }
+    .member:hover { transform: translateY(-2px); box-shadow: 0 0 22px rgba(216,164,255,0.8); }
 
     .member-note {
       margin-top: 16px;
@@ -229,25 +190,12 @@
       box-shadow: 0 0 26px rgba(216,164,255,0.9);
     }
 
-    footer {
-      padding: 10px 18px 45px;
-      color: #e7d3ff;
-      font-size: 0.85rem;
-      opacity: 0.85;
-    }
+    footer { padding: 10px 18px 45px; color: #e7d3ff; font-size: 0.85rem; opacity: 0.85; }
 
     @media (max-width: 640px) {
-      header {
-        padding-top: 60px;
-      }
-
-      .tagline {
-        letter-spacing: 0.18rem;
-      }
-
-      .card {
-        padding: 28px 18px;
-      }
+      header { padding-top: 60px; }
+      .tagline { letter-spacing: 0.18rem; }
+      .card { padding: 28px 18px; }
     }
   </style>
 </head>
@@ -262,11 +210,7 @@
     <main>
       <section class="card">
         <h2>About Us</h2>
-        <p>
-          Welcome to Amethyst Entertainment! We are a Roblox entertainment group inspired by the style, energy,
-          and creativity of KATSEYE. Our mission is to bring exciting performances, bold visuals, and unforgettable
-          moments to our community.
-        </p>
+        <p>Welcome to Amethyst Entertainment! We are a Roblox entertainment group inspired by the style, energy, and creativity of KATSEYE. Our mission is to bring exciting performances, bold visuals, and unforgettable moments to our community.</p>
       </section>
 
       <section class="card">
@@ -296,9 +240,7 @@
       </section>
     </main>
 
-    <footer>
-      © 2026 Amethyst Entertainment. Fan-inspired and not officially affiliated with KATSEYE.
-    </footer>
+    <footer>© 2026 Amethyst Entertainment. Fan-inspired and not officially affiliated with KATSEYE.</footer>
   </div>
 </body>
 </html>
