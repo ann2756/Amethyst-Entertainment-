@@ -17,24 +17,15 @@
       --bg-3: #310d52;
       --purple-1: #ead7ff;
       --purple-2: #d8a4ff;
-      --purple-3: #b86ef6;
       --purple-4: #8b35c9;
       --purple-5: #5a1f8f;
-      --card: rgba(27, 10, 45, 0.8);
       --text: #fdf7ff;
       --muted: #e7d3ff;
       --soft-border: rgba(255, 255, 255, 0.18);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'DM Sans', Arial, sans-serif;
@@ -50,8 +41,7 @@
       text-align: center;
     }
 
-    body::before,
-    body::after {
+    body::before, body::after {
       content: '✦   ✧   ✦   ✧';
       position: fixed;
       left: 50%;
@@ -64,40 +54,24 @@
       animation: drift 8s ease-in-out infinite;
     }
 
-    body::before {
-      top: 12%;
-    }
-
-    body::after {
-      bottom: 12%;
-      animation-delay: -4s;
-    }
+    body::before { top: 12%; }
+    body::after { bottom: 12%; animation-delay: -4s; }
 
     @keyframes drift {
       0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.6; }
       50% { transform: translateX(-50%) translateY(-12px); opacity: 1; }
     }
 
-    .page {
-      position: relative;
-      z-index: 1;
-    }
-
-    header {
-      padding: 80px 20px 36px;
-    }
+    .page { position: relative; z-index: 1; }
+    header { padding: 80px 20px 36px; }
 
     .brand {
       font-family: 'Great Vibes', cursive;
       font-size: clamp(4rem, 10vw, 7rem);
       line-height: 1;
-      letter-spacing: 1px;
       font-weight: 400;
       color: #f7eeff;
-      text-shadow:
-        0 0 8px rgba(255,255,255,0.9),
-        0 0 22px rgba(216,164,255,0.85),
-        0 0 42px rgba(168,85,247,0.9);
+      text-shadow: 0 0 8px rgba(255,255,255,0.9), 0 0 22px rgba(216,164,255,0.85), 0 0 42px rgba(168,85,247,0.9);
       margin-bottom: 14px;
     }
 
@@ -118,11 +92,7 @@
       margin: 22px auto 0;
     }
 
-    main {
-      max-width: 940px;
-      margin: 0 auto;
-      padding: 20px 18px 50px;
-    }
+    main { max-width: 940px; margin: 0 auto; padding: 20px 18px 50px; }
 
     .card {
       background: linear-gradient(135deg, rgba(44, 14, 70, 0.82), rgba(22, 8, 38, 0.9));
@@ -143,19 +113,8 @@
       text-shadow: 0 0 16px rgba(216,164,255,0.6);
     }
 
-    .card p {
-      color: var(--muted);
-      line-height: 1.75;
-      font-size: 1.04rem;
-    }
-
-    .members {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 18px;
-    }
+    .card p { color: var(--muted); line-height: 1.75; font-size: 1.04rem; }
+    .members { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 18px; }
 
     .member {
       display: inline-block;
@@ -168,15 +127,10 @@
       color: #fff;
     }
 
-    .social-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 14px;
-      margin-top: 22px;
-    }
+    .social-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 22px; }
 
     .social-links a {
+      display: inline-block;
       text-decoration: none;
       color: var(--text);
       background: linear-gradient(135deg, #7c35b4, #a855f7);
@@ -186,6 +140,7 @@
       font-weight: 600;
       transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
       box-shadow: 0 0 18px rgba(168,85,247,0.22);
+      cursor: pointer;
     }
 
     .social-links a:hover {
@@ -195,25 +150,12 @@
       box-shadow: 0 0 26px rgba(216,164,255,0.9);
     }
 
-    footer {
-      padding: 10px 18px 45px;
-      color: #e7d3ff;
-      font-size: 0.85rem;
-      opacity: 0.85;
-    }
+    footer { padding: 10px 18px 45px; color: #e7d3ff; font-size: 0.85rem; opacity: 0.85; }
 
     @media (max-width: 640px) {
-      header {
-        padding-top: 60px;
-      }
-
-      .tagline {
-        letter-spacing: 0.18rem;
-      }
-
-      .card {
-        padding: 28px 18px;
-      }
+      header { padding-top: 60px; }
+      .tagline { letter-spacing: 0.18rem; }
+      .card { padding: 28px 18px; }
     }
   </style>
 </head>
@@ -254,9 +196,10 @@
         <div class="social-links">
           <a href="https://www.roblox.com/" target="_blank" rel="noopener noreferrer">Roblox</a>
           <a href="https://discord.com/" target="_blank" rel="noopener noreferrer">Discord</a>
-          <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a>
-          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.tiktok.com/@aniplackii" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <a href="https://www.youtube.com/@AmethystEntertainment-y2e" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="https://www.instagram.com/amethystentertainment2026/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://x.com/Amethyst_Ent_" target="_blank" rel="noopener noreferrer">X / Twitter</a>
         </div>
       </section>
     </main>
