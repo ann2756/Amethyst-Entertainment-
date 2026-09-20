@@ -130,6 +130,42 @@
 
     .card p { color: var(--muted); line-height: 1.75; font-size: 1.04rem; }
 
+    .next-live {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .next-live::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      left: -30px;
+      top: 50%;
+      width: 48%;
+      height: 125%;
+      transform: translateY(-50%);
+      background:
+        linear-gradient(90deg, rgba(44, 14, 70, 0.05), rgba(44, 14, 70, 0.68) 78%, rgba(44, 14, 70, 0.98)),
+        url('katseye-coachella.jpg') center / cover no-repeat;
+      opacity: 0.42;
+      filter: saturate(0.75) blur(0.4px);
+      -webkit-mask-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,0.85) 45%, transparent 100%);
+      mask-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,0.85) 45%, transparent 100%);
+    }
+
+    .next-live h2 { margin-bottom: 8px; }
+
+    .next-live-title {
+      color: var(--purple-1);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.45rem, 4vw, 2.35rem);
+      font-weight: 700;
+      letter-spacing: 0.08rem;
+      text-transform: uppercase;
+      text-shadow: 0 0 18px rgba(216,164,255,0.7);
+    }
+
     .members {
       display: flex;
       flex-wrap: wrap;
@@ -196,6 +232,7 @@
       header { padding-top: 60px; }
       .tagline { letter-spacing: 0.18rem; }
       .card { padding: 28px 18px; }
+      .next-live::before { width: 75%; left: -25px; opacity: 0.3; }
     }
   </style>
 </head>
@@ -211,6 +248,11 @@
       <section class="card">
         <h2>About Us</h2>
         <p>Welcome to Amethyst Entertainment! We are a Roblox entertainment group inspired by the style, energy, and creativity of KATSEYE. Our mission is to bring exciting performances, bold visuals, and unforgettable moments to our community.</p>
+      </section>
+
+      <section class="card next-live">
+        <h2>Our Next Live Is..</h2>
+        <div class="next-live-title">Coachella Week 2!</div>
       </section>
 
       <section class="card">
