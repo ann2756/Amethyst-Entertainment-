@@ -26,7 +26,7 @@
     .card h2 { font-family:'Cinzel',serif; font-size:clamp(1.5rem,3vw,2rem); color:var(--purple-2); margin-bottom:14px; letter-spacing:.08rem; text-shadow:0 0 16px rgba(216,164,255,.6); }
     .card p { color:var(--muted); line-height:1.75; font-size:1.04rem; }
     .next-live { position:relative; overflow:hidden; isolation:isolate; }
-    .next-live::before { content:''; position:absolute; z-index:-1; inset:50% auto auto -30px; width:48%; height:125%; transform:translateY(-50%); background:linear-gradient(90deg,rgba(44,14,70,.05),rgba(44,14,70,.68) 78%,rgba(44,14,70,.98)),url('https://raw.githubusercontent.com/ann2756/Amethyst-Entertainment-/main/katseye-coachella.jpg') center/cover no-repeat; opacity:.42; filter:saturate(.75) blur(.4px); mask-image:linear-gradient(90deg,#000,rgba(0,0,0,.85) 45%,transparent); }
+    .next-live::before { content:''; position:absolute; z-index:-1; inset:50% auto auto -30px; width:48%; height:125%; transform:translateY(-50%); background:linear-gradient(90deg,rgba(44,14,70,.05),rgba(44,14,70,.68) 78%,rgba(44,14,70,.98)),url('https://raw.githubusercontent.com/ann2756/Amethyst-Entertainment-/main/katseye-coachella.jpg') center/cover no-repeat; opacity:.42; filter:saturate(.75) blur(.4px); -webkit-mask-image:linear-gradient(90deg,#000,rgba(0,0,0,.85) 45%,transparent); mask-image:linear-gradient(90deg,#000,rgba(0,0,0,.85) 45%,transparent); }
     .next-live-title { color:var(--purple-1); font-family:'Cinzel',serif; font-size:clamp(1.45rem,4vw,2.35rem); font-weight:700; letter-spacing:.08rem; text-transform:uppercase; text-shadow:0 0 18px rgba(216,164,255,.7); }
     .event-link { display:inline-block; margin-top:14px; color:#fff; font-weight:700; text-decoration:underline; text-shadow:0 0 4px #fff,0 0 12px rgba(216,164,255,.7); }
     .members,.social-links { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:18px; }
@@ -42,7 +42,7 @@
     @keyframes fade { from { opacity:0; } to { opacity:1; } }
     .modal-card { position:relative; width:min(680px,100%); min-height:390px; overflow:hidden; text-align:left; border:1px solid rgba(216,164,255,.38); border-radius:28px; background:linear-gradient(100deg,rgba(24,7,40,.93),rgba(31,10,53,.96)); box-shadow:0 0 35px rgba(168,85,247,.35),0 20px 60px rgba(0,0,0,.5); padding:34px 34px 34px 42%; animation:enter .55s cubic-bezier(.2,.8,.2,1) both; }
     @keyframes enter { from { opacity:0; transform:translateY(28px) scale(.94) rotate(-1deg); } to { opacity:1; transform:none; } }
-    .modal-card::before { content:''; position:absolute; inset:0 auto 0 0; width:43%; background:linear-gradient(90deg,rgba(29,8,46,.18),rgba(29,8,46,.82)),url('https://raw.githubusercontent.com/ann2756/Amethyst-Entertainment-/main/lara%20raj%20katseye.jpeg') center/cover no-repeat; filter:saturate(.8) blur(.2px); opacity:.8; mask-image:linear-gradient(90deg,#000,rgba(0,0,0,.88) 60%,transparent); animation:reveal .8s ease both; }
+    .modal-card::before { content:''; position:absolute; inset:0 auto 0 0; width:43%; background:linear-gradient(90deg,rgba(29,8,46,.18),rgba(29,8,46,.82)),url('https://raw.githubusercontent.com/ann2756/Amethyst-Entertainment-/main/37154765671347457.jpeg') center/cover no-repeat; filter:saturate(.8) blur(.2px); opacity:.8; -webkit-mask-image:linear-gradient(90deg,#000,rgba(0,0,0,.88) 60%,transparent); mask-image:linear-gradient(90deg,#000,rgba(0,0,0,.88) 60%,transparent); animation:reveal .8s ease both; }
     @keyframes reveal { from { transform:scale(1.08); opacity:0; } to { transform:scale(1); opacity:.8; } }
     .modal-content { position:relative; z-index:1; }
     .modal-card h2 { color:var(--purple-1); margin-bottom:18px; }
@@ -50,7 +50,7 @@
     .profile-list strong { color:#fff; }
     .color-hearts { display:inline-flex; gap:.3rem; vertical-align:middle; font-size:1.1rem; }
     .close-modal { position:absolute; z-index:2; top:12px; right:16px; border:0; background:transparent; color:#fff; font-size:1.8rem; cursor:pointer; }
-    @media (max-width:640px) { header { padding-top:60px; } .tagline { letter-spacing:.18rem; } .card { padding:28px 18px; } .modal-card { min-height:0; padding:220px 24px 28px; } .modal-card::before { width:100%; height:210px; bottom:auto; mask-image:linear-gradient(180deg,#000,transparent); } }
+    @media (max-width:640px) { header { padding-top:60px; } .tagline { letter-spacing:.18rem; } .card { padding:28px 18px; } .modal-card { min-height:0; padding:220px 24px 28px; } .modal-card::before { width:100%; height:210px; bottom:auto; -webkit-mask-image:linear-gradient(180deg,#000,transparent); mask-image:linear-gradient(180deg,#000,transparent); } }
     @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms!important; transition-duration:.01ms!important; } }
   </style>
 </head>
@@ -60,12 +60,83 @@
     <main>
       <section class="card"><h2>About Us</h2><p>Welcome to Amethyst Entertainment! We are a Roblox entertainment group inspired by the style, energy, and creativity of KATSEYE. Our mission is to bring exciting performances, bold visuals, and unforgettable moments to our community.</p></section>
       <section class="card next-live"><h2>Our Next Live Is..</h2><div class="next-live-title">Coachella Week 2!</div><a class="event-link" href="https://www.tiktok.com/live/event/7687701102615068694?enter_from=personal_live_event_card" target="_blank" rel="noopener noreferrer">Click this to see the event!</a></section>
-      <section class="card"><h2>Our Members</h2><p>All KATSEYE-inspired roles are currently taken.</p><div class="members"><a class="member" href="https://www.tiktok.com/@katseye.lover246" target="_blank" rel="noopener noreferrer">Sophia</a><a class="member" href="https://www.tiktok.com/@annaslobodnitsky" target="_blank" rel="noopener noreferrer">Daniela</a><a class="member" href="https://www.tiktok.com/@daniela.rants12" target="_blank" rel="noopener noreferrer">Megan</a><a class="member" href="https://www.tiktok.com/@aniplackii" target="_blank" rel="noopener noreferrer">Yoonchae</a><button class="member member-button" type="button">Lara</button><a class="member" href="https://www.tiktok.com/@luvv444.nora" target="_blank" rel="noopener noreferrer">Manon</a></div><div class="member-note">Click A Member To Be Brought To Their Profile!</div></section>
+      <section class="card"><h2>Our Members</h2><p>All KATSEYE-inspired roles are currently taken.</p><div class="members"><a class="member" href="https://www.tiktok.com/@katseye.lover246" target="_blank" rel="noopener noreferrer">Sophia</a><a class="member" href="https://www.tiktok.com/@annaslobodnitsky" target="_blank" rel="noopener noreferrer">Daniela</a><button class="member member-button megan-button" type="button">Megan</button><a class="member" href="https://www.tiktok.com/@aniplackii" target="_blank" rel="noopener noreferrer">Yoonchae</a><button class="member member-button lara-button" type="button">Lara</button><a class="member" href="https://www.tiktok.com/@luvv444.nora" target="_blank" rel="noopener noreferrer">Manon</a></div><div class="member-note">Click A Member To Be Brought To Their Profile!</div></section>
       <section class="card"><h2>Follow Us</h2><p>Stay connected with Amethyst Entertainment.</p><div class="social-links"><a href="https://www.roblox.com/" target="_blank" rel="noopener noreferrer">Roblox</a><a href="https://x.com/Amethyst_Ent_" target="_blank" rel="noopener noreferrer">Twitter</a><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></div></section>
     </main>
     <footer>© 2026 Amethyst Entertainment. Fan-inspired and not officially affiliated with KATSEYE.</footer>
   </div>
-  <div class="modal" id="lara-modal" role="dialog" aria-modal="true" aria-labelledby="lara-title"><div class="modal-card"><button class="close-modal" type="button" aria-label="Close Lara information">×</button><div class="modal-content"><h2 id="lara-title">Facts About Our Lara!</h2><div class="profile-list"><div><strong>Name:</strong> Lemon</div><div><strong>Age:</strong> 1*</div><div><strong>Country:</strong> 🇬🇧</div><div><strong>Favorite colors:</strong> <span class="color-hearts" aria-label="green blue purple yellow hearts">💚💙💜💛</span></div><div><strong>Fun fact:</strong> She can make weird noises while laughing!</div><div><strong>KATSEYE bias:</strong> Lara &amp; Daniela</div><div><strong>Favorite KATSEYE song:</strong> Gnarly</div></div></div></div></div>
-  <script>const button=document.querySelector('.member-button'),modal=document.getElementById('lara-modal'),close=document.querySelector('.close-modal'); button.addEventListener('click',()=>{modal.classList.add('is-open');close.focus()}); close.addEventListener('click',()=>modal.classList.remove('is-open')); modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('is-open')}); document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('is-open')});</script>
+
+  <div class="modal" id="lara-modal" role="dialog" aria-modal="true" aria-labelledby="lara-title">
+    <div class="modal-card">
+      <button class="close-modal" type="button" aria-label="Close Lara information">×</button>
+      <div class="modal-content">
+        <h2 id="lara-title">Facts About Our Lara!</h2>
+        <div class="profile-list">
+          <div><strong>Name:</strong> Lemon</div>
+          <div><strong>Age:</strong> 1*</div>
+          <div><strong>Country:</strong> 🇬🇧</div>
+          <div><strong>Favorite colors:</strong> <span class="color-hearts" aria-label="green blue purple yellow hearts">💚💙💜💛</span></div>
+          <div><strong>Fun fact:</strong> She can make weird noises while laughing!</div>
+          <div><strong>KATSEYE bias:</strong> Lara &amp; Daniela</div>
+          <div><strong>Favorite KATSEYE song:</strong> Gnarly</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="megan-modal" role="dialog" aria-modal="true" aria-labelledby="megan-title">
+    <div class="modal-card">
+      <button class="close-modal" type="button" aria-label="Close Megan information">×</button>
+      <div class="modal-content">
+        <h2 id="megan-title">Facts About Our Megan!</h2>
+        <div class="profile-list">
+          <div><strong>Name:</strong> Evelyn</div>
+          <div><strong>Age:</strong> Hidden</div>
+          <div><strong>Country:</strong> 🇬🇧</div>
+          <div><strong>Favorite colors:</strong> <span class="color-hearts" aria-label="baby blue hearts">💙💙</span></div>
+          <div><strong>Fun fact:</strong> Her tongue can reach her nose.</div>
+          <div><strong>KATSEYE bias:</strong> Megan</div>
+          <div><strong>Favorite KATSEYE song:</strong> M.I.A</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const laraButton = document.querySelector('.lara-button');
+    const meganButton = document.querySelector('.megan-button');
+    const laraModal = document.getElementById('lara-modal');
+    const meganModal = document.getElementById('megan-modal');
+    const closeButtons = document.querySelectorAll('.close-modal');
+
+    laraButton.addEventListener('click', () => {
+      laraModal.classList.add('is-open');
+      laraModal.querySelector('.close-modal').focus();
+    });
+
+    meganButton.addEventListener('click', () => {
+      meganModal.classList.add('is-open');
+      meganModal.querySelector('.close-modal').focus();
+    });
+
+    closeButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        laraModal.classList.remove('is-open');
+        meganModal.classList.remove('is-open');
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      if (event.target === laraModal) laraModal.classList.remove('is-open');
+      if (event.target === meganModal) meganModal.classList.remove('is-open');
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        laraModal.classList.remove('is-open');
+        meganModal.classList.remove('is-open');
+      }
+    });
+  </script>
 </body>
 </html>
