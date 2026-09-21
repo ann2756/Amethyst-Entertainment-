@@ -5,17 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amethyst Entertainment</title>
   <meta name="description" content="Amethyst Entertainment — a Roblox entertainment group inspired by KATSEYE." />
-  <meta property="og:title" content="Amethyst Entertainment" />
-  <meta property="og:description" content="Roblox entertainment inspired by KATSEYE." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ann2756.github.io/Amethyst-Entertainment-/" />
-  <meta property="og:image" content="https://ann2756.github.io/Amethyst-Entertainment-/social-preview.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Amethyst Entertainment" />
-  <meta name="twitter:description" content="Roblox entertainment inspired by KATSEYE." />
-  <meta name="twitter:image" content="https://ann2756.github.io/Amethyst-Entertainment-/social-preview.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet" />
@@ -23,55 +12,43 @@
     :root { --bg-1:#07010d; --bg-2:#1a062e; --bg-3:#310d52; --purple-1:#ead7ff; --purple-2:#d8a4ff; --purple-4:#8b35c9; --purple-5:#5a1f8f; --text:#fdf7ff; --muted:#e7d3ff; --soft-border:rgba(255,255,255,.18); }
     * { box-sizing:border-box; margin:0; padding:0; }
     html { scroll-behavior:smooth; }
-    body { font-family:'DM Sans',Arial,sans-serif; background:radial-gradient(circle at 20% 15%,rgba(184,110,246,.28),transparent 18%),radial-gradient(circle at 80% 20%,rgba(216,164,255,.18),transparent 22%),radial-gradient(circle at 50% 100%,rgba(122,80,255,.25),transparent 35%),linear-gradient(145deg,var(--bg-1),var(--bg-2) 38%,var(--bg-3)); color:var(--text); min-height:100vh; position:relative; overflow-x:hidden; text-align:center; }
-    body::before, body::after { content:'✦   ✧   ✦   ✧'; position:fixed; left:50%; transform:translateX(-50%); color:rgba(234,215,255,.45); font-size:clamp(1rem,2vw,1.5rem); letter-spacing:1.2rem; z-index:0; pointer-events:none; animation:drift 8s ease-in-out infinite; }
+    body { font-family:'DM Sans',Arial,sans-serif; color:var(--text); min-height:100vh; overflow-x:hidden; text-align:center; background:radial-gradient(circle at 20% 15%,rgba(184,110,246,.28),transparent 18%),radial-gradient(circle at 80% 20%,rgba(216,164,255,.18),transparent 22%),radial-gradient(circle at 50% 100%,rgba(122,80,255,.25),transparent 35%),linear-gradient(145deg,var(--bg-1),var(--bg-2) 38%,var(--bg-3)); }
+    body::before,body::after { content:'✦   ✧   ✦   ✧'; position:fixed; left:50%; transform:translateX(-50%); color:rgba(234,215,255,.45); font-size:clamp(1rem,2vw,1.5rem); letter-spacing:1.2rem; z-index:0; pointer-events:none; animation:drift 8s ease-in-out infinite; }
     body::before { top:12%; } body::after { bottom:12%; animation-delay:-4s; }
-    @keyframes drift { 0%,100% { transform:translateX(-50%) translateY(0); opacity:.6; } 50% { transform:translateX(-50%) translateY(-12px); opacity:1; } }
-    .page { position:relative; z-index:1; }
-    header { padding:80px 20px 36px; }
-    .brand { font-family:'Great Vibes',cursive; font-size:clamp(4rem,10vw,7rem); line-height:1; letter-spacing:1px; font-weight:400; color:#f7eeff; text-shadow:0 0 8px rgba(255,255,255,.9),0 0 22px rgba(216,164,255,.85),0 0 42px rgba(168,85,247,.9); margin-bottom:14px; }
-    .brand-letter { display:inline-block; font-family:'Great Vibes',cursive; font-weight:400; font-size:1.18em; line-height:.8; color:#f7eeff; background:transparent; border:none; box-shadow:none; padding:0; margin-right:.04em; transform:translateY(-.08em); text-shadow:0 0 8px rgba(255,255,255,.9),0 0 22px rgba(216,164,255,.85),0 0 42px rgba(168,85,247,.9); vertical-align:middle; }
+    @keyframes drift { 0%,100% { transform:translateX(-50%); opacity:.6; } 50% { transform:translateX(-50%) translateY(-12px); opacity:1; } }
+    .page { position:relative; z-index:1; } header { padding:80px 20px 36px; }
+    .brand { font-family:'Great Vibes',cursive; font-size:clamp(4rem,10vw,7rem); line-height:1; color:#f7eeff; text-shadow:0 0 8px rgba(255,255,255,.9),0 0 22px rgba(216,164,255,.85),0 0 42px rgba(168,85,247,.9); margin-bottom:14px; }
+    .brand-letter { display:inline-block; font-size:1.18em; line-height:.8; color:#f7eeff; transform:translateY(-.08em); text-shadow:0 0 8px rgba(255,255,255,.9),0 0 22px rgba(216,164,255,.85),0 0 42px rgba(168,85,247,.9); vertical-align:middle; }
     .tagline { font-family:'Cinzel',serif; font-size:.82rem; letter-spacing:.38rem; text-transform:uppercase; color:var(--purple-1); opacity:.9; }
-    .divider { width:160px; height:2px; background:linear-gradient(90deg,transparent,var(--purple-2),transparent); box-shadow:0 0 15px rgba(184,110,246,.8); margin:22px auto 0; }
-    main { max-width:940px; margin:0 auto; padding:20px 18px 50px; }
+    .divider { width:160px; height:2px; margin:22px auto 0; background:linear-gradient(90deg,transparent,var(--purple-2),transparent); box-shadow:0 0 15px rgba(184,110,246,.8); }
+    main { max-width:940px; margin:auto; padding:20px 18px 50px; }
     .card { background:linear-gradient(135deg,rgba(44,14,70,.82),rgba(22,8,38,.9)); border:1px solid var(--soft-border); border-radius:28px; box-shadow:0 16px 38px rgba(0,0,0,.35),inset 0 0 22px rgba(184,110,246,.08); padding:34px 26px; margin-bottom:26px; backdrop-filter:blur(8px); }
     .card h2 { font-family:'Cinzel',serif; font-size:clamp(1.5rem,3vw,2rem); color:var(--purple-2); margin-bottom:14px; letter-spacing:.08rem; text-shadow:0 0 16px rgba(216,164,255,.6); }
     .card p { color:var(--muted); line-height:1.75; font-size:1.04rem; }
     .next-live { position:relative; overflow:hidden; isolation:isolate; }
-    .next-live::before { content:''; position:absolute; z-index:-1; left:-30px; top:50%; width:48%; height:125%; transform:translateY(-50%); background:linear-gradient(90deg,rgba(44,14,70,.05),rgba(44,14,70,.68) 78%,rgba(44,14,70,.98)),url('https://raw.githubusercontent.com/ann2756/Amethyst-Entertainment-/main/katseye-coachella.jpg') center/cover no-repeat; opacity:.42; filter:saturate(.75) blur(.4px); -webkit-mask-image:linear-gradient(90deg,#000,rgba(0,0,0,.85) 45%,transparent); mask-image:linear-gradient(90deg,#000,rgba(0,0,0,.85) 45%,transparent); }
-    .next-live h2 { margin-bottom:8px; }
+    .next-live::before { content:''; position:absolute; z-index:-1; inset:50% auto auto -30px; width:48%; height:125%; transform:translateY(-50%); background:linear-gradient(90deg,rgba(44,14,70,.05),rgba(44,14,70,.68) 78%,rgba(44,14,70,.98)),url('https://raw.githubusercontent.com/ann2756/Amethyst-Entertainment-/main/katseye-coachella.jpg') center/cover no-repeat; opacity:.42; filter:saturate(.75) blur(.4px); mask-image:linear-gradient(90deg,#000,rgba(0,0,0,.85) 45%,transparent); }
     .next-live-title { color:var(--purple-1); font-family:'Cinzel',serif; font-size:clamp(1.45rem,4vw,2.35rem); font-weight:700; letter-spacing:.08rem; text-transform:uppercase; text-shadow:0 0 18px rgba(216,164,255,.7); }
-    .event-link { display:inline-block; margin-top:14px; color:#fff; font-size:1rem; font-weight:700; text-decoration:underline; text-underline-offset:4px; text-shadow:0 0 4px rgba(255,255,255,.9),0 0 12px rgba(216,164,255,.7),0 0 18px rgba(168,85,247,.45); transition:color .2s ease,text-shadow .2s ease; }
-    .event-link:hover { color:#fff; text-shadow:0 0 6px rgba(255,255,255,1),0 0 15px rgba(216,164,255,.9),0 0 22px rgba(168,85,247,.6); }
+    .event-link { display:inline-block; margin-top:14px; color:#fff; font-weight:700; text-decoration:underline; text-shadow:0 0 4px #fff,0 0 12px rgba(216,164,255,.7); }
     .members,.social-links { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:18px; }
-    .member,.social-links a { text-decoration:none; color:#fff; border-radius:999px; font-weight:600; transition:transform .2s ease,box-shadow .2s ease; }
+    .member,.social-links a { text-decoration:none; color:#fff; border-radius:999px; font-weight:600; transition:.2s ease; }
     .member { display:inline-block; padding:12px 18px; background:linear-gradient(135deg,var(--purple-4),var(--purple-5)); border:1px solid rgba(255,255,255,.13); box-shadow:0 0 18px rgba(184,110,246,.25); }
-    .member:hover { transform:translateY(-2px); box-shadow:0 0 22px rgba(216,164,255,.8); }
+    .member:hover,.social-links a:hover { transform:translateY(-2px); box-shadow:0 0 22px rgba(216,164,255,.8); }
     .member-button { font:inherit; cursor:pointer; }
-    .member-note { margin-top:16px; font-size:1rem; letter-spacing:.08rem; text-transform:uppercase; font-weight:700; color:var(--purple-1); text-shadow:0 0 12px rgba(216,164,255,.5); }
-    .social-links { gap:14px; margin-top:22px; }
-    .social-links a { padding:13px 22px; background:linear-gradient(135deg,#7c35b4,#a855f7); border:1px solid rgba(255,255,255,.15); box-shadow:0 0 18px rgba(168,85,247,.22); }
-    .social-links a:hover { transform:translateY(-3px); background:linear-gradient(135deg,#d9b7ff,#f3dcff); color:#220736; box-shadow:0 0 26px rgba(216,164,255,.9); }
+    .member-note { margin-top:16px; color:var(--purple-1); font-weight:700; text-transform:uppercase; letter-spacing:.08rem; }
+    .social-links a { padding:13px 22px; background:linear-gradient(135deg,#7c35b4,#a855f7); }
+    footer { padding:10px 18px 45px; color:var(--muted); font-size:.85rem; opacity:.85; }
     .modal { display:none; position:fixed; inset:0; z-index:10; align-items:center; justify-content:center; padding:20px; background:rgba(5,0,12,.78); backdrop-filter:blur(7px); }
-    .modal.is-open { display:flex; animation:modalFadeIn .35s ease both; }
-    @keyframes modalFadeIn { from { opacity:0; } to { opacity:1; } }
-    .modal-card { position:relative; width:min(680px,100%); overflow:hidden; text-align:left; border:1px solid rgba(216,164,255,.38); border-radius:28px; background:linear-gradient(100deg,rgba(24,7,40,.93),rgba(31,10,53,.96)); box-shadow:0 0 35px rgba(168,85,247,.35),0 20px 60px rgba(0,0,0,.5); padding:34px 34px 34px 42%; animation:cardEnter .55s cubic-bezier(.2,.8,.2,1) both; }
-    @keyframes cardEnter { from { opacity:0; transform:translateY(28px) scale(.94) rotate(-1deg); } to { opacity:1; transform:translateY(0) scale(1) rotate(0); } }
-    .modal-card::before { content:''; position:absolute; inset:0 auto 0 0; width:43%; background:linear-gradient(90deg,rgba(29,8,46,.18),rgba(29,8,46,.82)),url('https://github.com/ann2756/Amethyst-Entertainment-/blob/main/Lara') center/cover no-repeat; filter:saturate(.8) blur(.2px); opacity:.8; -webkit-mask-image:linear-gradient(90deg,#000 0%,rgba(0,0,0,.88) 60%,transparent 100%); mask-image:linear-gradient(90deg,#000 0%,rgba(0,0,0,.88) 60%,transparent 100%); animation:imageReveal .8s ease both; }
-    @keyframes imageReveal { from { transform:scale(1.08); opacity:0; } to { transform:scale(1); opacity:.8; } }
-    .modal-content { position:relative; z-index:1; }
-    .modal-card h2 { margin-bottom:18px; color:var(--purple-1); animation:titleGlow 2.4s ease-in-out infinite alternate; }
-    @keyframes titleGlow { from { text-shadow:0 0 8px rgba(216,164,255,.45); } to { text-shadow:0 0 18px rgba(216,164,255,.95),0 0 30px rgba(168,85,247,.45); } }
-    .profile-list { display:grid; gap:9px; color:var(--muted); line-height:1.5; }
-    .profile-list div { animation:factSlide .45s ease both; }
-    .profile-list div:nth-child(1) { animation-delay:.12s; } .profile-list div:nth-child(2) { animation-delay:.18s; } .profile-list div:nth-child(3) { animation-delay:.24s; } .profile-list div:nth-child(4) { animation-delay:.30s; } .profile-list div:nth-child(5) { animation-delay:.36s; } .profile-list div:nth-child(6) { animation-delay:.42s; } .profile-list div:nth-child(7) { animation-delay:.48s; }
-    @keyframes factSlide { from { opacity:0; transform:translateX(14px); } to { opacity:1; transform:translateX(0); } }
-    .profile-list strong { color:#fff; }
-    .close-modal { position:absolute; z-index:2; top:12px; right:16px; border:0; background:transparent; color:#fff; font-size:1.8rem; cursor:pointer; text-shadow:0 0 10px rgba(216,164,255,.8); }
-    .close-modal:hover { color:var(--purple-2); transform:rotate(90deg); transition:transform .25s ease; }
-    footer { padding:10px 18px 45px; color:#e7d3ff; font-size:.85rem; opacity:.85; }
-    @media (prefers-reduced-motion:reduce) { *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; } }
-    @media (max-width:640px) { header { padding-top:60px; } .tagline { letter-spacing:.18rem; } .card { padding:28px 18px; } .next-live::before { width:75%; left:-25px; opacity:.3; } .modal-card { padding:220px 24px 28px; } .modal-card::before { width:100%; height:210px; bottom:auto; -webkit-mask-image:linear-gradient(180deg,#000,transparent); mask-image:linear-gradient(180deg,#000,transparent); } }
+    .modal.is-open { display:flex; animation:fade .35s ease both; }
+    @keyframes fade { from { opacity:0; } to { opacity:1; } }
+    .modal-card { position:relative; width:min(680px,100%); min-height:390px; overflow:hidden; text-align:left; border:1px solid rgba(216,164,255,.38); border-radius:28px; background:linear-gradient(100deg,rgba(24,7,40,.93),rgba(31,10,53,.96)); box-shadow:0 0 35px rgba(168,85,247,.35),0 20px 60px rgba(0,0,0,.5); padding:34px 34px 34px 42%; animation:enter .55s cubic-bezier(.2,.8,.2,1) both; }
+    @keyframes enter { from { opacity:0; transform:translateY(28px) scale(.94) rotate(-1deg); } to { opacity:1; transform:none; } }
+    .modal-card::before { content:''; position:absolute; inset:0 auto 0 0; width:43%; background:linear-gradient(90deg,rgba(29,8,46,.18),rgba(29,8,46,.82)),url('https://raw.githubusercontent.com/ann2756/Amethyst-Entertainment-/main/lara%20raj%20katseye.jpeg') center/cover no-repeat; filter:saturate(.8) blur(.2px); opacity:.8; mask-image:linear-gradient(90deg,#000,rgba(0,0,0,.88) 60%,transparent); animation:reveal .8s ease both; }
+    @keyframes reveal { from { transform:scale(1.08); opacity:0; } to { transform:scale(1); opacity:.8; } }
+    .modal-content { position:relative; z-index:1; } .modal-card h2 { color:var(--purple-1); margin-bottom:18px; }
+    .profile-list { display:grid; gap:9px; color:var(--muted); line-height:1.5; } .profile-list strong { color:#fff; }
+    .close-modal { position:absolute; z-index:2; top:12px; right:16px; border:0; background:transparent; color:#fff; font-size:1.8rem; cursor:pointer; }
+    @media (max-width:640px) { header { padding-top:60px; } .tagline { letter-spacing:.18rem; } .card { padding:28px 18px; } .modal-card { min-height:0; padding:220px 24px 28px; } .modal-card::before { width:100%; height:210px; bottom:auto; mask-image:linear-gradient(180deg,#000,transparent); } }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms!important; transition-duration:.01ms!important; } }
   </style>
 </head>
 <body>
@@ -85,20 +62,7 @@
     </main>
     <footer>© 2026 Amethyst Entertainment. Fan-inspired and not officially affiliated with KATSEYE.</footer>
   </div>
-  <div class="modal" id="lara-modal" role="dialog" aria-modal="true" aria-labelledby="lara-title">
-    <div class="modal-card">
-      <button class="close-modal" type="button" aria-label="Close Lara information">×</button>
-      <div class="modal-content"><h2 id="lara-title">Facts About Our Lara!</h2><div class="profile-list"><div><strong>Name:</strong> Lemon</div><div><strong>Age:</strong> 1*</div><div><strong>Country:</strong> 🇬🇧</div><div><strong>Favorite colors:</strong> Green, blue, purple and yellow</div><div><strong>Fun fact:</strong> She can make weird noises while laughing!</div><div><strong>KATSEYE bias:</strong> Lara &amp; Daniela</div><div><strong>Favorite KATSEYE song:</strong> Gnarly</div></div></div>
-    </div>
-  </div>
-  <script>
-    const laraButton = document.querySelector('.member-button');
-    const modal = document.getElementById('lara-modal');
-    const closeModal = document.querySelector('.close-modal');
-    laraButton.addEventListener('click', () => { modal.classList.add('is-open'); closeModal.focus(); });
-    closeModal.addEventListener('click', () => modal.classList.remove('is-open'));
-    modal.addEventListener('click', (event) => { if (event.target === modal) modal.classList.remove('is-open'); });
-    document.addEventListener('keydown', (event) => { if (event.key === 'Escape') modal.classList.remove('is-open'); });
-  </script>
+  <div class="modal" id="lara-modal" role="dialog" aria-modal="true" aria-labelledby="lara-title"><div class="modal-card"><button class="close-modal" type="button" aria-label="Close Lara information">×</button><div class="modal-content"><h2 id="lara-title">Facts About Our Lara!</h2><div class="profile-list"><div><strong>Name:</strong> Lemon</div><div><strong>Age:</strong> 1*</div><div><strong>Country:</strong> 🇬🇧</div><div><strong>Favorite colors:</strong> Green, blue, purple and yellow</div><div><strong>Fun fact:</strong> She can make weird noises while laughing!</div><div><strong>KATSEYE bias:</strong> Lara &amp; Daniela</div><div><strong>Favorite KATSEYE song:</strong> Gnarly</div></div></div></div></div>
+  <script>const button=document.querySelector('.member-button'),modal=document.getElementById('lara-modal'),close=document.querySelector('.close-modal'); button.addEventListener('click',()=>{modal.classList.add('is-open');close.focus()}); close.addEventListener('click',()=>modal.classList.remove('is-open')); modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('is-open')}); document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('is-open')});</script>
 </body>
 </html>
